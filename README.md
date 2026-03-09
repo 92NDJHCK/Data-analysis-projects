@@ -29,3 +29,5 @@ Products recommendations :
 * Investigate **early-month purchasing behavior** to see if marketing campaigns influenced sales.
 
 * Analyze **customer segmentation** to identify high-value buyers
+
+Dashboard :
