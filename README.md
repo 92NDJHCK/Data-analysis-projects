@@ -21,7 +21,7 @@ Products insights :
   
 * **Sales consistency**: We are seeing a steady flow of one order per day. It’s interesting to note that the highest-value orders happened right at the start of the month (Jan 2nd and 3rd).
   
-* **Price range**: Our orders range **from 50$ to 200$**, showing a good variety in the types of products customers are choosing.
+* **Price range**: Our orders range **from $50 to $200**, showing a good variety in the types of products customers are choosing.
 
 Products recommendations : 
 * Promote **Tires C** as a featured product.
