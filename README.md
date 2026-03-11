@@ -33,7 +33,7 @@ Products recommendations :
 Dashboard :
 
 <img width="1202" height="845" alt="Capture d’écran 2026-03-10 à 10 35 11 PM" src="https://github.com/user-attachments/assets/e23df685-d06b-44c0-ad21-910aa0472d3d" />
-📊 Interactive Dashboard (Day 1)
-[![Click to View Dashboard](<img width="1202" height="845" alt="Capture d’écran 2026-03-10 à 10 35 11 PM" src="https://github.com/user-attachments/assets/e23df685-d06b-44c0-ad21-910aa0472d3d" />)]([URL_DE_TON_TABLEAU_PUBLIC)](https://public.tableau.com/shared/5KKTQGWKB?:display_count=n&:origin=viz_share_link)
+
+📊 Interactive Dashboard https://public.tableau.com/shared/5KKTQGWKB?:display_count=n&:origin=viz_share_link
 
 *> **Tip:** Click on the image above to open the interactive dashboard on Tableau Public. You can filter by product to explore the data.*
