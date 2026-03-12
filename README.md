@@ -1,5 +1,25 @@
 # SQL-product-analytics-exercises
-This folder contains hands-on exercises to practice data extraction, aggregation, filtering, and analysis using SQL. Each exercise demonstrates the ability to extract insights from datasets and simulate real business questions.
+This folder contains hands-on exercises to practice data extraction, aggregation, filtering, analysis using SQL and interactive dashboards created with Tableau. Each exercise demonstrates the ability to extract insights from datasets and simulate real business questions.
+📊 Data Strategy & Architecture
+This section describes the framework and technical structure used to ensure data quality and project viability.
+
+1. The 7V Framework (Strategic Analysis)
+The project is evaluated using the 7V model to balance technical constraints with business value.
+<img width="551" height="181" alt="Capture d’écran 2026-03-12 à 11 45 27 AM" src="https://github.com/user-attachments/assets/5d08c917-0f53-4fac-984a-e6356ea47aa1" />
+_Note:_ The data was already clean. I focused on preparing it for analysis an BI integration.
+
+2. Data Dictionary
+  <img width="687" height="81" alt="Capture d’écran 2026-03-12 à 11 49 29 AM" src="https://github.com/user-attachments/assets/c24e4514-17ab-424b-8a60-f2028a6af3ff" />
+
+3. Data schema
+The following diagram represents the structure of the orders table. It identifies the unique keys and the relationships within the dataset.
+<img width="396" height="187" alt="Capture d’écran 2026-03-12 à 11 55 23 AM" src="https://github.com/user-attachments/assets/f42649cc-af5d-49e9-afeb-e8dd1f0c100d" />
+
+   
+**Date Formatting**: I changed the date column to the Date type in Excel. This helps SQL and Tableau organize the data by day, month, or year.
+**Data Typing (BI)**: In Tableau, I separated Dimensions (IDs, Product names) from Measures (Prices/Amounts). This makes sure the calculations (like Sum or Average) are correct.
+**Currency**: I added the $ (Dollar) symbol in Tableau to make the reports easier to read for the business.
+
 # Exercice 1 - Top orders
 **Objective** : Analyze the initial transaction log to identify top-performing products and customer purchasing behavior for the period of January 1st–6th, 2026.
 
