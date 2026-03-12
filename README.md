@@ -13,7 +13,8 @@ The project is evaluated using the 7V model to balance technical constraints wit
 Note : The data was already clean. I focused on preparing it for analysis and BI integration.
 
 2. Data dictionary
-  <img width="687" height="81" alt="Capture d’écran 2026-03-12 à 11 49 29 AM" src="https://github.com/user-attachments/assets/c24e4514-17ab-424b-8a60-f2028a6af3ff" />
+<img width="709" height="82" alt="Capture d’écran 2026-03-12 à 12 12 13 PM" src="https://github.com/user-attachments/assets/a8aee99f-d87f-4a8f-8fa6-6437cf640ff4" />
+
 
 3. Data schema
 
