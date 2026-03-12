@@ -6,6 +6,7 @@ This section describes the framework and technical structure used to ensure data
 1. The 7V Framework (Strategic Analysis)
 The project is evaluated using the 7V model to balance technical constraints with business value.
 <img width="551" height="181" alt="Capture d’écran 2026-03-12 à 11 45 27 AM" src="https://github.com/user-attachments/assets/5d08c917-0f53-4fac-984a-e6356ea47aa1" />
+
 _Note:_ The data was already clean. I focused on preparing it for analysis an BI integration.
 
 2. Data Dictionary
