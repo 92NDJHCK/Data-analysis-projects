@@ -76,6 +76,7 @@ GROUP BY product
 ORDER BY revenue DESC;
 ```
 <img width="159" height="129" alt="Capture d’écran 2026-03-12 à 4 36 02 PM" src="https://github.com/user-attachments/assets/8837bfcc-a0a9-4d57-b44a-8094e9a02e11" />
+
 Products insights : 
 
 * Top Performer: Tires C is the clear leader with $200.00.
