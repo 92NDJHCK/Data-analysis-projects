@@ -21,9 +21,9 @@ The following diagram represents the structure of the orders table. It identifie
 <img width="396" height="187" alt="Capture d’écran 2026-03-12 à 11 55 23 AM" src="https://github.com/user-attachments/assets/f42649cc-af5d-49e9-afeb-e8dd1f0c100d" />
 
    
-**Date Formatting**: Date colums were converted to the Date type in Excel. This helps SQL and Tableau organize the data by day, month, or year.
-**Data Typing (BI)**: In Tableau, dimensions (IDs, product names) and measures (prices/amounts)were seperated. This makes sure the calculations (like (sum) or (average)) are correct.
-**Currency**: I added the $ (Dollar) symbol in Tableau to make the reports easier to read for the business.
+**Date Formatting**: Date columns were converted to the Date type in Excel. This helps SQL and Tableau organize the data by day, month, or year.
+**Data Typing (BI)**: In Tableau, dimensions (IDs, product names) and measures (prices/amounts)were separated. This makes sure the calculations (like (sum) or (average)) are correct.
+**Currency**: The $ (Dollar) symbol was added in Tableau to make the reports easier to read for the business.
 
 # Exercice 1 - Top orders
 **Objective** : Analyze the initial transaction log to identify top-performing products and customer purchasing behavior for the period of January 1st–6th, 2026.
@@ -60,4 +60,4 @@ Dashboard :
 <img width="1202" height="845" alt="Capture d’écran 2026-03-10 à 10 35 11 PM" src="https://github.com/user-attachments/assets/e23df685-d06b-44c0-ad21-910aa0472d3d" />
 📊 Interactive Dashboard https://public.tableau.com/shared/5KKTQGWKB?:display_count=n&:origin=viz_share_link
 
-> 🚀 **View Interactive Dashboard:** [Tableau Public Link](https://public.tableau.com/shared/5KKTQGWKB?:display_count=n&:origin=viz_share_link)
+🚀 [View Interactive Dashboard: Tableau Public Link](https://public.tableau.com/shared/5KKTQGWKB?:display_count=n&:origin=viz_share_link)
