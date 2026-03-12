@@ -10,7 +10,7 @@ This section describes the framework and technical structure used to ensure data
 The project is evaluated using the 7V model to balance technical constraints with business value.
 <img width="551" height="181" alt="Capture d’écran 2026-03-12 à 11 45 27 AM" src="https://github.com/user-attachments/assets/5d08c917-0f53-4fac-984a-e6356ea47aa1" />
 
-Note : The data was already clean. I focused on preparing it for analysis an BI integration.
+Note : The data was already clean. I focused on preparing it for analysis and BI integration.
 
 2. Data dictionary
   <img width="687" height="81" alt="Capture d’écran 2026-03-12 à 11 49 29 AM" src="https://github.com/user-attachments/assets/c24e4514-17ab-424b-8a60-f2028a6af3ff" />
@@ -21,8 +21,8 @@ The following diagram represents the structure of the orders table. It identifie
 <img width="396" height="187" alt="Capture d’écran 2026-03-12 à 11 55 23 AM" src="https://github.com/user-attachments/assets/f42649cc-af5d-49e9-afeb-e8dd1f0c100d" />
 
    
-**Date Formatting**: I changed the date column to the Date type in Excel. This helps SQL and Tableau organize the data by day, month, or year.
-**Data Typing (BI)**: In Tableau, I separated Dimensions (IDs, Product names) from Measures (Prices/Amounts). This makes sure the calculations (like Sum or Average) are correct.
+**Date Formatting**: Date colums were converted to the Date type in Excel. This helps SQL and Tableau organize the data by day, month, or year.
+**Data Typing (BI)**: In Tableau, dimensions (IDs, product names) and measures (prices/amounts)were seperated. This makes sure the calculations (like (sum) or (average)) are correct.
 **Currency**: I added the $ (Dollar) symbol in Tableau to make the reports easier to read for the business.
 
 # Exercice 1 - Top orders
@@ -44,7 +44,7 @@ Products insights :
 
 * Based on the results, we can see that **the revenue Leader** is **Tires C** (Order ID: 3) is the top product in this dataset, generating $200.00 in a single transaction from customer_103.
   
-* **Sales consistency**: We are seeing a steady flow of one order per day. It’s interesting to note that the highest-value orders happened right at the start of the month (Jan 2nd and 3rd).
+* **Sales consistency**: The data shows a steady flow of one order per day. It’s interesting to note that the highest-value orders happened right at the start of the month (Jan 2nd and 3rd).
   
 * **Price range**: Our orders range **from $50 to $200**, showing a good variety in the types of products customers are choosing.
 
@@ -60,4 +60,4 @@ Dashboard :
 <img width="1202" height="845" alt="Capture d’écran 2026-03-10 à 10 35 11 PM" src="https://github.com/user-attachments/assets/e23df685-d06b-44c0-ad21-910aa0472d3d" />
 📊 Interactive Dashboard https://public.tableau.com/shared/5KKTQGWKB?:display_count=n&:origin=viz_share_link
 
-*> **Tip:** Click on the link above to open the interactive dashboard on Tableau Public. You can filter by product to explore the data.*
+> 🚀 **View Interactive Dashboard:** [Tableau Public Link](https://public.tableau.com/shared/5KKTQGWKB?:display_count=n&:origin=viz_share_link)
