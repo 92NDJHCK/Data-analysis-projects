@@ -87,6 +87,7 @@ Products insights :
 * Average revenue: Tires B follows closely with $150.00.
 
 * Lowest revenue: Tires A generates the lowest revenue ($50.00).
+  
 
 2. Global business metrics (total revenue, orders & AOV)
    
@@ -112,8 +113,10 @@ Key Metrics:
 * Total Orders: 6
 
 * Average order value (AOV): $110.00
+  
 
 3. High-value analysis (products > $150)
+   
 SQL query:
 
 ```sql
