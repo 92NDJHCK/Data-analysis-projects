@@ -121,7 +121,9 @@ GROUP BY order_id, product
 
 HAVING SUM(amount) > 150;
 ```
+
 <img width="209" height="66" alt="Capture d’écran 2026-03-12 à 5 02 13 PM" src="https://github.com/user-attachments/assets/78fd1eb3-d524-47f9-8ad8-0f3a963d7b69" />
+
 
 Insights:
 
