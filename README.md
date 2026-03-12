@@ -107,11 +107,11 @@ FROM orders;
 <img width="401" height="63" alt="Capture d’écran 2026-03-12 à 4 48 34 PM" src="https://github.com/user-attachments/assets/d701a9bc-017e-45f5-8d15-734f51ef7379" />
 
 Key Metrics:
-*Total Revenue: $660.00
+* Total Revenue: $660.00
 
-*Total Orders: 6
+* Total Orders: 6
 
-*Average order value (AOV): $110.00
+* Average order value (AOV): $110.00
 
 3. High-value analysis (products > $150)
 SQL query:
@@ -131,8 +131,8 @@ HAVING SUM(amount) > 150;
 
 Insights:
 
-*Premium concentration: Only one transaction (Order_id = 3) exceeds the $150 threshold.
+* Premium concentration: Only one transaction (Order_id = 3) exceeds the $150 threshold.
 
-*Customer profile: Customer_103 is currently the only "Premium" buyer in our dataset.
+* Customer profile: Customer_103 is currently the only "Premium" buyer in our dataset.
 
 
