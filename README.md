@@ -58,6 +58,5 @@ Products recommendations :
 Dashboard :
 
 <img width="1202" height="845" alt="Capture d’écran 2026-03-10 à 10 35 11 PM" src="https://github.com/user-attachments/assets/e23df685-d06b-44c0-ad21-910aa0472d3d" />
-📊 Interactive Dashboard https://public.tableau.com/shared/5KKTQGWKB?:display_count=n&:origin=viz_share_link
 
 🚀 [View Interactive Dashboard: Tableau Public Link](https://public.tableau.com/shared/5KKTQGWKB?:display_count=n&:origin=viz_share_link)
