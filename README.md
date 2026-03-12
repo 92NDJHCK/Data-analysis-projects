@@ -1,7 +1,7 @@
 # SQL-product-analytics-exercises
 This folder contains hands-on exercises to practice data extraction, aggregation, filtering, analysis using SQL and interactive dashboards created with Tableau. Each exercise demonstrates the ability to extract insights from datasets and simulate real business questions.
 
-📊 Data strategy & architecture
+# 📊 Data strategy & architecture
 
 This section describes the framework and technical structure used to ensure data quality and project viability.
 
@@ -64,6 +64,9 @@ Dashboard :
 
 # Exercice 2 - Customer Insights & Performance Metrics
 **Objective**: Calculate key business metrics (Revenue, AOV, Order Frequency) and filter high-value transactions to define customer segments.
+
+1. Revenue per product
+
 SQL query:
 
 ```sql
@@ -84,3 +87,20 @@ Products insights :
 * Mid-range: Tires B follows closely with $150.00.
 
 * Underperformers: Tires A generates the lowest revenue ($50.00).
+
+2. Global business metrics (total revenue, orders & AOV)
+   
+SQL query :
+
+```sql
+SELECT 
+SUM(amount) AS total_revenue,
+COUNT(order_id) AS total_orders,
+ROUND(AVG(amount),2) AS average_order_value
+FROM orders;
+```
+
+<img width="401" height="63" alt="Capture d’écran 2026-03-12 à 4 48 34 PM" src="https://github.com/user-attachments/assets/d701a9bc-017e-45f5-8d15-734f51ef7379" />
+
+
+
