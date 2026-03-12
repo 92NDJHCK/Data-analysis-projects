@@ -84,23 +84,49 @@ Products insights :
 
 * Top Performer: Tires C is the clear leader with $200.00.
 
-* Mid-range: Tires B follows closely with $150.00.
+* Average revenue: Tires B follows closely with $150.00.
 
-* Underperformers: Tires A generates the lowest revenue ($50.00).
+* Lowest revenue: Tires A generates the lowest revenue ($50.00).
 
 2. Global business metrics (total revenue, orders & AOV)
    
 SQL query :
 
 ```sql
-SELECT 
+SELECT
+
 SUM(amount) AS total_revenue,
+
 COUNT(order_id) AS total_orders,
+
 ROUND(AVG(amount),2) AS average_order_value
+
 FROM orders;
 ```
 
 <img width="401" height="63" alt="Capture d’écran 2026-03-12 à 4 48 34 PM" src="https://github.com/user-attachments/assets/d701a9bc-017e-45f5-8d15-734f51ef7379" />
 
+Key Metrics:
+Total Revenue: $660.00
+Total Orders: 6
+Average order value (AOV): $110.00
+
+3. High-value analysis (products > $150)
+``sql
+SELECT order_id, product, SUM(amount) AS revenue
+
+FROM orders
+
+GROUP BY order_id, product 
+
+HAVING SUM(amount) > 150;
+```
+<img width="209" height="66" alt="Capture d’écran 2026-03-12 à 5 02 13 PM" src="https://github.com/user-attachments/assets/78fd1eb3-d524-47f9-8ad8-0f3a963d7b69" />
+
+Insights:
+
+Premium Concentration: Only one transaction (Order_id = 3) exceeds the $150 threshold.
+
+Customer Profile: Customer_103 is currently the only "Premium" buyer in our dataset.
 
 
