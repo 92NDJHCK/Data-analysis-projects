@@ -1,15 +1,17 @@
 # SQL-product-analytics-exercises
 This folder contains hands-on exercises to practice data extraction, aggregation, filtering, analysis using SQL and interactive dashboards created with Tableau. Each exercise demonstrates the ability to extract insights from datasets and simulate real business questions.
-📊 Data Strategy & Architecture
+
+📊 Data strategy & architecture
+
 This section describes the framework and technical structure used to ensure data quality and project viability.
 
-1. The 7V Framework (Strategic Analysis)
+1. The 7V framework (strategic analysis)
 The project is evaluated using the 7V model to balance technical constraints with business value.
 <img width="551" height="181" alt="Capture d’écran 2026-03-12 à 11 45 27 AM" src="https://github.com/user-attachments/assets/5d08c917-0f53-4fac-984a-e6356ea47aa1" />
 
 _Note:_ The data was already clean. I focused on preparing it for analysis an BI integration.
 
-2. Data Dictionary
+2. Data dictionary
   <img width="687" height="81" alt="Capture d’écran 2026-03-12 à 11 49 29 AM" src="https://github.com/user-attachments/assets/c24e4514-17ab-424b-8a60-f2028a6af3ff" />
 
 3. Data schema
