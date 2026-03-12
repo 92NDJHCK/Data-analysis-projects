@@ -112,7 +112,8 @@ Total Orders: 6
 Average order value (AOV): $110.00
 
 3. High-value analysis (products > $150)
-``sql
+   
+```sql
 SELECT order_id, product, SUM(amount) AS revenue
 
 FROM orders
