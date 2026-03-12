@@ -65,7 +65,7 @@ Dashboard :
 # Exercice 2 - Customer Insights & Performance Metrics
 **Objective**: Calculate key business metrics (Revenue, AOV, Order Frequency) and filter high-value transactions to define customer segments.
 
-##1. Revenue per product
+## 1. Revenue per product
 
 SQL query:
 
@@ -89,7 +89,7 @@ Products insights :
 * Lowest revenue: Tires A generates the lowest revenue ($50.00).
   
 
-##2. Global business metrics (total revenue, orders & AOV)
+## 2. Global business metrics (total revenue, orders & AOV)
    
 SQL query :
 
