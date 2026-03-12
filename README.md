@@ -61,3 +61,25 @@ Dashboard :
 <img width="1202" height="845" alt="Capture d’écran 2026-03-10 à 10 35 11 PM" src="https://github.com/user-attachments/assets/e23df685-d06b-44c0-ad21-910aa0472d3d" />
 
 🚀 [View Interactive Dashboard: Tableau Public Link](https://public.tableau.com/shared/5KKTQGWKB?:display_count=n&:origin=viz_share_link)
+
+# Exercice 2 - Customer Insights & Performance Metrics
+**Objective**: Calculate key business metrics (Revenue, AOV, Order Frequency) and filter high-value transactions to define customer segments.
+SQL query:
+
+```sql
+SELECT product, SUM(amount) AS revenue
+
+FROM orders
+
+GROUP BY product
+
+ORDER BY revenue DESC;
+```
+<img width="159" height="129" alt="Capture d’écran 2026-03-12 à 4 36 02 PM" src="https://github.com/user-attachments/assets/8837bfcc-a0a9-4d57-b44a-8094e9a02e11" />
+Products insights : 
+
+* Top Performer: Tires C is the clear leader with $200.00.
+
+* Mid-range: Tires B follows closely with $150.00.
+
+* Underperformers: Tires A generates the lowest revenue ($50.00).
