@@ -5,18 +5,18 @@ This folder contains hands-on exercises to practice data extraction, aggregation
 
 This section describes the framework and technical structure used to ensure data quality and project viability.
 
-1. The 7V framework (strategic analysis)
+## 1. The 7V framework (strategic analysis)
 
 The project is evaluated using the 7V model to balance technical constraints with business value.
 <img width="551" height="181" alt="Capture d’écran 2026-03-12 à 11 45 27 AM" src="https://github.com/user-attachments/assets/5d08c917-0f53-4fac-984a-e6356ea47aa1" />
 
 Note : The data was already clean. I focused on preparing it for analysis and BI integration.
 
-2. Data dictionary
+## 2. Data dictionary
 <img width="709" height="82" alt="Capture d’écran 2026-03-12 à 12 12 13 PM" src="https://github.com/user-attachments/assets/a8aee99f-d87f-4a8f-8fa6-6437cf640ff4" />
 
 
-3. Data schema
+## 3. Data schema
 
 The following diagram represents the structure of the orders table. It identifies the unique keys and the relationships within the dataset.
 <img width="396" height="187" alt="Capture d’écran 2026-03-12 à 11 55 23 AM" src="https://github.com/user-attachments/assets/f42649cc-af5d-49e9-afeb-e8dd1f0c100d" />
@@ -65,7 +65,7 @@ Dashboard :
 # Exercice 2 - Customer Insights & Performance Metrics
 **Objective**: Calculate key business metrics (Revenue, AOV, Order Frequency) and filter high-value transactions to define customer segments.
 
-1. Revenue per product
+##1. Revenue per product
 
 SQL query:
 
@@ -89,7 +89,7 @@ Products insights :
 * Lowest revenue: Tires A generates the lowest revenue ($50.00).
   
 
-2. Global business metrics (total revenue, orders & AOV)
+##2. Global business metrics (total revenue, orders & AOV)
    
 SQL query :
 
@@ -100,7 +100,7 @@ SUM(amount) AS total_revenue,
 
 COUNT(order_id) AS total_orders,
 
-ROUND(AVG(amount),2) AS average_order_value
+ROUND(AVG(amount),2) AS average_order_value_AOV
 
 FROM orders;
 ```
@@ -115,7 +115,7 @@ Key Metrics:
 * Average order value (AOV): $110.00
   
 
-3. High-value analysis (products > $150)
+## 3. High-value analysis (products > $150)
    
 SQL query:
 
