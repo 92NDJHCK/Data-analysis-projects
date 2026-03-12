@@ -6,6 +6,7 @@ This folder contains hands-on exercises to practice data extraction, aggregation
 This section describes the framework and technical structure used to ensure data quality and project viability.
 
 1. The 7V framework (strategic analysis)
+
 The project is evaluated using the 7V model to balance technical constraints with business value.
 <img width="551" height="181" alt="Capture d’écran 2026-03-12 à 11 45 27 AM" src="https://github.com/user-attachments/assets/5d08c917-0f53-4fac-984a-e6356ea47aa1" />
 
