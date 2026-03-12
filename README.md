@@ -128,8 +128,8 @@ HAVING SUM(amount) > 150;
 
 Insights:
 
-Premium Concentration: Only one transaction (Order_id = 3) exceeds the $150 threshold.
+Premium concentration: Only one transaction (Order_id = 3) exceeds the $150 threshold.
 
-Customer Profile: Customer_103 is currently the only "Premium" buyer in our dataset.
+Customer profile: Customer_103 is currently the only "Premium" buyer in our dataset.
 
 
