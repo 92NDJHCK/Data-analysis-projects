@@ -16,6 +16,7 @@ _Note:_ The data was already clean. I focused on preparing it for analysis an BI
   <img width="687" height="81" alt="Capture d’écran 2026-03-12 à 11 49 29 AM" src="https://github.com/user-attachments/assets/c24e4514-17ab-424b-8a60-f2028a6af3ff" />
 
 3. Data schema
+
 The following diagram represents the structure of the orders table. It identifies the unique keys and the relationships within the dataset.
 <img width="396" height="187" alt="Capture d’écran 2026-03-12 à 11 55 23 AM" src="https://github.com/user-attachments/assets/f42649cc-af5d-49e9-afeb-e8dd1f0c100d" />
 
