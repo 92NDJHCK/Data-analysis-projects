@@ -100,7 +100,7 @@ SUM(amount) AS total_revenue,
 
 COUNT(order_id) AS total_orders,
 
-ROUND(AVG(amount),2) AS average_order_value_AOV
+ROUND(AVG(amount),2) AS average_order_value
 
 FROM orders;
 ```
