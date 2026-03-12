@@ -22,8 +22,8 @@ The following diagram represents the structure of the orders table. It identifie
 <img width="396" height="187" alt="Capture d’écran 2026-03-12 à 11 55 23 AM" src="https://github.com/user-attachments/assets/f42649cc-af5d-49e9-afeb-e8dd1f0c100d" />
 
    
-**Date Formatting**: Date columns were converted to the Date type in Excel. This helps SQL and Tableau organize the data by day, month, or year.
-**Data Typing (BI)**: In Tableau, dimensions (IDs, product names) and measures (prices/amounts) were separated. This makes sure the calculations (like (sum) or (average)) are correct.
+**Date formatting**: Date columns were converted to the Date type in Excel. This helps SQL and Tableau organize the data by day, month, or year.
+**Data typing (BI)**: In Tableau, dimensions (IDs, product names) and measures (prices/amounts) were separated. This makes sure the calculations (like (sum) or (average)) are correct.
 **Currency**: The $ (Dollar) symbol was added in Tableau to make the reports easier to read for the business.
 
 # Exercice 1 - Top orders
