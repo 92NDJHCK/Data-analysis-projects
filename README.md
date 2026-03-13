@@ -59,7 +59,7 @@ Products recommendations :
 Dashboard :
 <img width="1001" height="708" alt="Capture d’écran 2026-03-13 à 1 14 18 PM" src="https://github.com/user-attachments/assets/eefe6083-9943-4d35-a3b1-3ab41c3f7dc4" />
 
-🚀 [View Interactive Dashboard: Tableau Public Link][(https://public.tableau.com/shared/5KKTQGWKB?:display_count=n&:origin=viz_share_link)](https://public.tableau.com/views/Salesoperationsdashboard-Jan2026/Tableaudebord1?:language=fr-FR&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+🚀 [View Interactive Dashboard: Tableau Public Link][(https://public.tableau.com/shared/5KKTQGWKB?:display_count=n&:origin=viz_share_link)](https://public.tableau.com/views/Salesoperationsdashboard-Jan2026/Tableaudebord1?:language=fr-FR&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)]
 
 # Exercice 2 - Customer Insights & Performance Metrics
 **Objective**: Calculate key business metrics (Revenue, AOV, Order Frequency) and filter high-value transactions to define customer segments.
@@ -142,5 +142,5 @@ Dashboard :
 <img width="1436" height="844" alt="Capture d’écran 2026-03-13 à 2 05 50 PM" src="https://github.com/user-attachments/assets/965b4d93-e135-4bad-b5cc-1afe35515556" />
 
 
-[View Interactive Dashboard: Tableau Public Linkhttps://public.tableau.com/views/RevenueAnalyticsOrderSegmentationDashboard/Revenueanalyticsordersegmentationdashboard?:language=fr-FR&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link ]
+[View Interactive Dashboard: Tableau Public Lin] [(khttps://public.tableau.com/views/RevenueAnalyticsOrderSegmentationDashboard/Revenueanalyticsordersegmentationdashboard?:language=fr-FR&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)]
 
