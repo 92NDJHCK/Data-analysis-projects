@@ -139,7 +139,7 @@ Insights:
 
 Dashboard :
 
-<img width="1436" height="844" alt="Capture d’écran 2026-03-13 à 2 05 50 PM" src="https://github.com/user-attachments/assets/965b4d93-e135-4bad-b5cc-1afe35515556" />
+<img width="993" height="786" alt="Capture d’écran 2026-03-13 à 2 13 13 PM" src="https://github.com/user-attachments/assets/5ec66a68-9408-4b59-bece-0d5e09727cc9" />
 
 
 🚀[View Interactive Dashboard: Tableau Public Link](https://public.tableau.com/views/RevenueAnalyticsOrderSegmentationDashboard/Revenueanalyticsordersegmentationdashboard?:language=fr-FR&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
