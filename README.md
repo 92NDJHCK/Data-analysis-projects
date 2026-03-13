@@ -142,5 +142,4 @@ Dashboard :
 <img width="1436" height="844" alt="Capture d’écran 2026-03-13 à 2 05 50 PM" src="https://github.com/user-attachments/assets/965b4d93-e135-4bad-b5cc-1afe35515556" />
 
 
-[View Interactive Dashboard: Tableau Public Link] (https://public.tableau.com/views/RevenueAnalyticsOrderSegmentationDashboard/Revenueanalyticsordersegmentationdashboard?:language=fr-FR&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
-
+[View Interactive Dashboard: Tableau Public Link](https://public.tableau.com/views/RevenueAnalyticsOrderSegmentationDashboard/Revenueanalyticsordersegmentationdashboard?:language=fr-FR&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
