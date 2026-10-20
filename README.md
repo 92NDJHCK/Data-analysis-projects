@@ -1,6 +1,6 @@
 ## About This Repository 
 
-This repository serves as a personal portfolio showcasing end-to-end Data & Web Analytics projects. It combines hands-on experience in **SQL data extraction & analysis**, **interactive BI dashboards (Power BI & Tableau)** and **automated Python ETL pipelines (API ingestion & Pandas cleaning)**, to derive actionable business insights.
+This repository serves as a personal portfolio showcasing end-to-end Data & Web Analytics projects. It combines hands-on experience in **SQL data extraction & analysis**, and **interactive BI dashboards (Power BI & Tableau)** to derive actionable business insights.
 
 # SQL Project
 
