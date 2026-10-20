@@ -26,7 +26,7 @@ The following diagram represents the structure of the orders table. It identifie
 **Data typing (BI)**: In Tableau, dimensions (IDs, product names) and measures (prices/amounts) were separated. This makes sure the calculations (like (sum) or (average)) are correct.
 **Currency**: The $ (Dollar) symbol was added in Tableau to make the reports easier to read for the business.
 
-# Exercice 1 - Top orders
+# - Top orders
 **Objective** : Analyze the initial transaction log to identify top-performing products and customer purchasing behavior for the period of January 1st–6th, 2026.
 
 SQL query:
@@ -61,7 +61,7 @@ Dashboard :
 
 🚀 [View Interactive Dashboard: Tableau Public Link](https://public.tableau.com/views/Salesoperationsdashboard-Jan2026/Tableaudebord1?:language=fr-FR&publish=yes&:sid=&:display_count=n&:origin=viz_share_link)
 
-# Exercice 2 - Customer Insights & Performance Metrics
+# - Customer Insights & Performance Metrics
 **Objective**: Calculate key business metrics (Revenue, AOV, Order Frequency) and filter high-value transactions to define customer segments.
 
 ## 1. Revenue per product
