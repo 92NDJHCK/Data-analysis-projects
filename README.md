@@ -1,7 +1,10 @@
-# SQL Project
-This folder contains hands-on project on data extraction, aggregation, filtering, analysis using SQL and interactive dashboards created with Tableau. Each part demonstrates the ability to extract insights from datasets and simulate real business questions.
+## About This Repository 
 
-# 📊 Data strategy & architecture
+This repository serves as a personal portfolio showcasing end-to-end Data & Web Analytics projects. It combines hands-on experience in **SQL data extraction & analysis**, **interactive BI dashboards (Power BI & Tableau)** and **automated Python ETL pipelines (API ingestion & Pandas cleaning)**, to derive actionable business insights.
+
+# SQL Project
+
+# Data strategy & architecture
 
 This section describes the framework and technical structure used to ensure data quality and project viability.
 
