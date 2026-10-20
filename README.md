@@ -151,20 +151,20 @@ Dashboard :
 
 # 📊 Data Professional Survey Dashboard
 
-## 📌 Project Overview
+## Project Overview
 An interactive Power BI dashboard analyzing career data, salaries, tech stacks, and job satisfaction from a global survey of data professionals.
 <img width="1426" height="807" alt="Capture d’écran 2026-10-20 à 22 14 09" src="https://github.com/user-attachments/assets/32644523-6e54-411d-8fe6-4f70d604d956" />
 
-## 🔑 Key Insights & Metrics
+## Key Insights
 - **Demographics:** 630 survey participants with an average age of 30 years (29.87).
-- **Geographic Breakdown:** Top participant countries include the United States, India, Canada, and others.
-- **Compensation Trends:** Data Scientists and Data Engineers report the highest average salaries among survey takers, followed by Data Architects and Data Analysts.
-- **Popular Tech Stack:** **Python** is overwhelmingly the favorite programming language across all job titles, followed by R.
+- **Geographic breakdown:** Top participant countries include the United States, India, Canada, and others.
+- **Compensation trends:** Data Scientists and Data Engineers report the highest average salaries among survey takers, followed by Data Architects and Data Analysts.
+- **Popular tech stack:** **Python** is overwhelmingly the favorite programming language across all job titles, followed by R.
 - **Job Satisfaction & Entry:**
-  - **Work/Life Balance:** Rated at an average of **5.74 / 10**.
-  - **Salary Happiness:** Rated at an average of **4.27 / 10**.
-  - **Difficulty to Break into Data:** ~42.7% found it neither easy nor difficult, while over 45% found it difficult or very difficult.
+  - **Work/Life balance:** Rated at an average of **5.74 / 10**.
+  - **Salary happiness:** Rated at an average of **4.27 / 10**.
+  - **Difficulty to break into Data:** ≈ 42.7% found it neither easy nor difficult, while over 45% found it difficult or very difficult.
 
-## 🛠️ Tools & Technologies Used
+## Business Intelligence and Source
 - **Business Intelligence:** Power BI (Data Modeling, DAX measures, Visualizations)
 - **Data Source:** Survey dataset (CSV) from Kaggle 
