@@ -275,9 +275,10 @@ plt.show()
   - Top Working Industries (Horizontal Bar Chart)
   - Correlation between Age and Compensation (Scatter Plot)
     
-** Visualizations & Key Insights **
+**Visualizations & Key Insights**
 
 <img width="606" height="451" alt="Capture d’écran 2026-10-23 à 14 30 50" src="https://github.com/user-attachments/assets/e795a763-6402-47f2-ac5b-13453efbb8ab" />
+
 **Distribution of Average Salary in USD:** The salary distribution is right-skewed. The vast majority of respondents earn within the lower brackets (under $50,000), with a sharp peak around $25,000. Higher salary brackets ($100,000+) contain significantly fewer respondents, pulling up the overall average.
 
 <img width="729" height="439" alt="Capture d’écran 2026-10-23 à 14 31 10" src="https://github.com/user-attachments/assets/72c22149-2323-4ef9-a5dd-f31db282bae1" />
