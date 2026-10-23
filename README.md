@@ -6,7 +6,7 @@ This repository serves as a personal portfolio showcasing end-to-end Data & Web 
 - SQL Project: Orders Analysis (fundamentals)
 - [Power BI dashboard (PDF)](./power_bi_dashboard.pdf)
 - [Dataset (CSV)](./_Python_project_.csv)
-- [Python notebook](./Python_Survey_project.ipynb)
+- [Python notebook](Python_Survey_project.ipynb)
 
 
 
