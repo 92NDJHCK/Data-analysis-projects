@@ -4,8 +4,9 @@
 This repository serves as a personal portfolio showcasing end-to-end Data & Web Analytics projects. It combines hands-on experience in **SQL data extraction & analysis**, **interactive BI dashboards (Power BI & Tableau)**, and **Python** to derive actionable business insights.
 
 - SQL Project: Orders Analysis (fundamentals)
-- [Power BI Project: Data Professional Survey](https://app.powerbi.com/links/o5o5lzL7YH?ctid=a2697119-66c5-4126-9991-b0a8d15d367f&pbi_source=linkShare&bookmarkGuid=f9312a47-f44d-4465-9740-a04ae2b99de6)
-- [Python Project: Data Professional Survey EDA](./project_python.ipynb)
+- [Power BI dashboard (PDF)](./power_bi_dashboard.pdf)
+- [Dataset (CSV)](./_Python_project_.csv)
+- [Python notebook](./Python_Survey_project.ipynb)
 
 
 
