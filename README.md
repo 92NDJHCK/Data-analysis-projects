@@ -1,6 +1,7 @@
 ## About This Repository 
 
-This repository serves as a personal portfolio showcasing end-to-end Data & Web Analytics projects. It combines hands-on experience in **SQL data extraction & analysis**, and **interactive BI dashboards (Power BI & Tableau)** to derive actionable business insights.
+This repository serves as a personal portfolio showcasing end-to-end Data & Web Analytics projects. It combines hands-on experience in **SQL data extraction & analysis**, **interactive BI dashboards (Power BI & Tableau)** ,and **Python** to derive actionable business insights.
+
 
 # SQL Project
 
@@ -152,7 +153,7 @@ Dashboard :
 # POWER BI PROJECT
 
 
-# 📊 Data Professional Survey Dashboard
+# Data Professional Survey Dashboard
 
 ## Project Overview
 An interactive Power BI dashboard analyzing career data, salaries, tech stacks, and job satisfaction from a global survey of data professionals.
@@ -170,4 +171,129 @@ An interactive Power BI dashboard analyzing career data, salaries, tech stacks, 
 
 ## Business Intelligence and Source
 - **Business Intelligence:** Power BI (Data Modeling, DAX measures, Visualizations)
+- 
 - **Data Source:** Survey dataset (CSV) from Kaggle 
+
+# Python Project: Data Professional Survey EDA
+## Overview
+An Exploratory Data Analysis (EDA) on the global Data Professional Survey dataset using Python to clean complex text fields, calculate salary distribution, and visualize key trends.
+
+The use of the same database used on Power BI  but on Python with career data, salaries, tech stacks, and job satisfaction from a global survey of data professionals.
+
+Python query :
+```
+import pandas as pd
+import matplotlib.pyplot as plt
+pd.set_option("display.max_columns", None)
+df = pd.read_csv(r"_Python_project_.csv")
+df.head()
+
+df.shape 
+
+df.head()
+
+df.info()  
+
+df.describe()
+
+df['Q1 - Which Title Best Fits your Current Role?'].unique()
+
+df['Q4 - What Industry do you work in?'].unique()
+df['Q11 - Which Country do you live in?'].unique()
+df = df.drop(columns=df.columns[4:9])
+Salary = df["Q3 - Current Yearly Salary (in USD)"]
+
+Salary = Salary.str.replace('+', '',regex=False)
+df[['Low', 'High']] = Salary.str.split('-', expand=True)
+print("inital NaN :", df["Q3 - Current Yearly Salary (in USD)"].isna().sum())
+df['Q3 - Current Yearly Salary (in USD)'].isna().sum()
+print(df[df['Q3 - Current Yearly Salary (in USD)'].isna()][['Q3 - Current Yearly Salary (in USD)', 'Low', 'High']])
+df['Low'] = df['Low'].str.replace('k', '', regex=False).astype(float) * 1000
+df['High'] = df['High'].str.replace('k', '', regex=False).astype(float) * 1000
+df['Salary_Mean'] = (df['Low'] + df['High']) / 2
+df["Q3 - Current Yearly Salary (in USD)"] = df['Salary_Mean']
+df = df.drop(columns=['Low', 'High', 'Salary_Mean'])
+print("after average calculation :", df["Q3 - Current Yearly Salary (in USD)"].isna().sum())
+empty_rows = df[df["Q3 - Current Yearly Salary (in USD)"].isna()]
+print(empty_rows)
+df.head()
+masque = df["Q1 - Which Title Best Fits your Current Role?"].str.startswith("Other", na=False)
+df.loc[masque, "Q1 - Which Title Best Fits your Current Role?"] = "Other"
+masque = df["Q4 - What Industry do you work in?"].str.startswith("Other", na=False)
+df.loc[masque, "Q4 - What Industry do you work in?"] = "Other"
+masque = df["Q11 - Which Country do you live in?"].str.startswith("Other", na=False)
+df.loc[masque, "Q11 - Which Country do you live in?"] = "Other"`
+masque = df["Q5 - Favorite Programming Language"].str.startswith("Other", na=False)
+df.loc[masque, "Q5 - Favorite Programming Language"] = "Other"
+df['Q5 - Favorite Programming Language'].unique()
+df.head()
+df['Q3 - Current Yearly Salary (in USD)'].plot(kind='hist', bins=20, color='skyblue', edgecolor='black')
+
+plt.title('Distribution of average salary in USD')
+plt.xlabel('Average Salary in USD')
+plt.ylabel('Number of Respondents')
+
+
+plt.show()
+df['Q5 - Favorite Programming Language'].value_counts().head(8).plot(kind='barh')
+plt.title('Favorite Programming Language')
+plt.show()
+rows_q6 = [
+    'Q6 - How Happy are you in your Current Position with the following? (Salary)',
+    'Q6 - How Happy are you in your Current Position with the following? (Work/Life Balance)',
+    'Q6 - How Happy are you in your Current Position with the following? (Coworkers)',
+    'Q6 - How Happy are you in your Current Position with the following? (Management)',
+    'Q6 - How Happy are you in your Current Position with the following? (Upward Mobility)',
+    'Q6 - How Happy are you in your Current Position with the following? (Learning New Things)'
+]
+
+df[rows_q6].mean().plot(kind='barh')
+plt.title('Job satisfaction')
+plt.xlabel('Scale /10')
+plt.show()
+df['Q4 - What Industry do you work in?'].value_counts().head(10).plot(kind='barh')
+plt.title('Top industries')
+plt.show()
+plt.figure(figsize=(9, 5))
+plt.scatter(df['Q10 - Current Age'], df['Q3 - Current Yearly Salary (in USD)'], color='skyblue', edgecolor='black', alpha=0.7)
+
+plt.title('Relationship between age and salary', fontsize=14, fontweight='bold')
+plt.xlabel('Age', fontsize=12)
+plt.ylabel('Average salary in USD', fontsize=12)
+
+plt.show()
+```
+
+
+## Key Steps & Highlights
+- **Data Cleaning & Parsing:** Converted textual salary ranges (e.g., `100k-120k`) into numeric bounds to compute exact average yearly compensation.
+- **Handling Missing Values:** Performed strict NaN validation to ensure data integrity during text-to-float transformations.
+- **Category Standardization:** Cleaned and grouped multi-variant responses (such as "Other...") across roles, industries, countries, and languages.
+- **Exploratory Visualizations:** Generated plots covering:
+  - Average Salary Distribution (Histogram) : 
+  - Top Favorite Programming Languages (Horizontal Bar Chart)
+  - Job Satisfaction across 6 Key Pillars (Bar Chart)
+  - Top Working Industries (Horizontal Bar Chart)
+  - Correlation between Age and Compensation (Scatter Plot)
+    
+** Visualizations & Key Insights **
+
+<img width="606" height="451" alt="Capture d’écran 2026-10-23 à 14 30 50" src="https://github.com/user-attachments/assets/e795a763-6402-47f2-ac5b-13453efbb8ab" />
+**Distribution of Average Salary in USD:** The salary distribution is right-skewed. The vast majority of respondents earn within the lower brackets (under $50,000), with a sharp peak around $25,000. Higher salary brackets ($100,000+) contain significantly fewer respondents, pulling up the overall average.
+
+<img width="729" height="439" alt="Capture d’écran 2026-10-23 à 14 31 10" src="https://github.com/user-attachments/assets/72c22149-2323-4ef9-a5dd-f31db282bae1" />
+
+**Favorite Programming Language:** Python is overwhelmingly the dominant language chosen by data professionals, with over 400 respondents. It is followed distantly by R and the "Other" category, while Java, JavaScript, and C/C++ register very low adoption in this specific dataset.   
+<img width="1150" height="437" alt="Capture d’écran 2026-10-23 à 14 31 22" src="https://github.com/user-attachments/assets/2680e0ce-1786-439c-b7cb-7e2c901021fb" />
+
+**Job Satisfaction:** Respondents report the highest satisfaction levels in Coworkers and Work/Life Balance (both scoring close to 5.8 / 10).
+Conversely, Salary satisfaction receives the lowest score (around 4.2 / 10), indicating a widespread desire for better financial compensation across roles.
+
+<img width="742" height="428" alt="Capture d’écran 2026-10-23 à 14 32 33" src="https://github.com/user-attachments/assets/cfdb23a8-058b-4849-9d49-5da401d161fb" />
+**Top Industries:** Aside from the grouped "Other" category, Tech is by far the leading industry employing data professionals (around 150 respondents), followed by Finance and Healthcare. Traditional sectors like Real Estate, Construction, and Agriculture show much lower representation.
+
+<img width="872" height="480" alt="Capture d’écran 2026-10-23 à 14 32 47" src="https://github.com/user-attachments/assets/7e7b08c0-907f-44a4-b7e0-ae9c92d59b36" />
+
+**Relationship Between Age and Salary:** The scatter plot reveals that high earners ($125,000 to nearly $200,000) are primarily concentrated within the core working age bracket of 25 to 45 years old. Extreme age groups (under 20 or over 60) mostly cluster around entry-level or lower salary tiers.
+
+**Source Notebook:** [`project_python.ipynb`](./project_python.ipynb)
