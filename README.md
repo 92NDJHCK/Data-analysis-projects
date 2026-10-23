@@ -34,7 +34,9 @@ The following diagram represents the structure of the orders table. It identifie
 
    
 **Date formatting**: Date columns were converted to the Date type in Excel. This helps SQL and Tableau organize the data by day, month, or year.
+
 **Data typing (BI)**: In Tableau, dimensions (IDs, product names) and measures (prices/amounts) were separated. This makes sure the calculations (like (sum) or (average)) are correct.
+
 **Currency**: The $ (Dollar) symbol was added in Tableau to make the reports easier to read for the business.
 
 ### Top orders
@@ -255,7 +257,7 @@ plt.xlabel('Age', fontsize=12)
 plt.ylabel('Average salary in USD', fontsize=12)
 
 plt.show()
-``` python
+``` 
 
 ### Keys steps & highlights
 - **Data cleaning & parsing:** Converted textual salary ranges (e.g., `100k-120k`) into numeric bounds to compute estimated average yearly compensation.
@@ -298,5 +300,5 @@ Conversely, Salary satisfaction receives the lowest score (around 4.2 / 10), ind
 - **Self-reported data.** Salaries and satisfaction scores are declared, not verified.
 - **Columns dropped by position.** Columns 4 to 8 were removed because (reason : not really needed for the analysis).
 - **Descriptive only.** The age/salary scatter plot shows a relationship visually between age and compensation.
-**Source notebook:**
+- **Source notebook:**
   [`project_python.ipynb`](./project_python.ipynb)
