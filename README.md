@@ -1,7 +1,7 @@
 # Data analysis portfolio
 ## About this repository 
 
-This repository serves as a personal portfolio showcasing end-to-end Data & Web Analytics projects. It combines hands-on experience in **SQL data extraction & analysis**, **interactive BI dashboards (Power BI & Tableau)** ,and **Python** to derive actionable business insights.
+This repository serves as a personal portfolio showcasing end-to-end Data & Web Analytics projects. It combines hands-on experience in **SQL data extraction & analysis**, **interactive BI dashboards (Power BI & Tableau)**, and **Python** to derive actionable business insights.
 
 - SQL Project: Orders Analysis (fundamentals)
 - [Power BI Project: Data Professional Survey](https://app.powerbi.com/links/o5o5lzL7YH?ctid=a2697119-66c5-4126-9991-b0a8d15d367f&pbi_source=linkShare&bookmarkGuid=f9312a47-f44d-4465-9740-a04ae2b99de6)
@@ -40,7 +40,7 @@ The following diagram represents the structure of the orders table. It identifie
 **Currency**: The $ (Dollar) symbol was added in Tableau to make the reports easier to read for the business.
 
 ### Top orders
-**Objective** : Analyze the initial transaction log to identify top-performing products and identify the highest-value orders for the period of January 1st–6th, 2026.
+**Objective** : Analyze the initial transaction log to identify the highest-value orders for the period of January 1st–6th, 2026.
 
 SQL query:
 
@@ -58,8 +58,7 @@ Products insights :
 
 * The highest-value order is #3 (Tires C, $200.00).
   
-* **Price range**: Our orders range **from $50 to $200**, showing a good variety in the types of products customers are choosing.
-
+* **Price range**: Our orders range **from $50 to $200**.
 
 **What this exercise shows:**
 * Ranking orders by value, and computing revenue per product.
@@ -171,6 +170,8 @@ An interactive Power BI dashboard analyzing career data, salaries, tech stacks, 
 
 ## Python project: data professional survey EDA
 ### Project overview
+**Source notebook:**
+[`project_python.ipynb`](./project_python.ipynb)
 An Exploratory Data Analysis (EDA) on the global Data Professional Survey dataset using Python to clean complex text fields, calculate salary distribution, and visualize key trends.
 
 The use of the same database used on Power BI  but on Python with career data, salaries, tech stacks, and job satisfaction from a global survey of data professionals.
@@ -259,7 +260,7 @@ plt.ylabel('Average salary in USD', fontsize=12)
 plt.show()
 ``` 
 
-### Keys steps & highlights
+### Key steps & highlights
 - **Data cleaning & parsing:** Converted textual salary ranges (e.g., `100k-120k`) into numeric bounds to compute estimated average yearly compensation.
 - **Handling missing values:** Performed strict NaN validation to ensure data integrity during text-to-float transformations.
 - **Category standardization:** Cleaned and grouped multi-variant responses (such as "Other...") across roles, industries, countries, and languages.
@@ -268,7 +269,7 @@ plt.show()
   - Top Favorite Programming Languages (Horizontal Bar Chart)
   - Job Satisfaction across 6 Key Pillars (Bar Chart)
   - Top Working Industries (Horizontal Bar Chart)
-  - Correlation between Age and Compensation (Scatter Plot)
+  - Relationship between Age and Compensation (Scatter Plot)
     
 ### Visualizations & key insights
 
@@ -298,7 +299,6 @@ Conversely, Salary satisfaction receives the lowest score (around 4.2 / 10), ind
 - **Open-ended ranges and missing values.** Ranges without an upper bound (e.g. `200k+`) and non-numeric answers end up as NaN and are excluded from salary averages. 2 respondents are affected.
 - **Self-selected sample.** 630 respondents who chose to answer a survey, so the results are not representative of all data professionals.
 - **Self-reported data.** Salaries and satisfaction scores are declared, not verified.
-- **Columns dropped by position.** Columns 4 to 8 were removed because (reason : not really needed for the analysis).
-- **Descriptive only.** The age/salary scatter plot shows a relationship visually between age and compensation.
-- **Source notebook:**
-  [`project_python.ipynb`](./project_python.ipynb)
+- **Columns dropped by position.** Columns 4 to 8 were removed because they were not needed for this analysis..
+- **The age/salary scatter plot is descriptive only:** no correlation or statistical test was computed.
+
