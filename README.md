@@ -9,9 +9,8 @@ This repository serves as a personal portfolio showcasing end-to-end Data & Web 
 - [Python notebook](_Python_Survey_project.ipynb)
 
 
-
 ## SQL project : order analysis (fundamentals)
-> Scope note: this is a mini-dataset of 6 orders (January 1st–6th, 2026), used to practice and demonstrate SQL fundamentals (`SELECT`, `WHERE`, `GROUP BY`, aggregations) and to connect the results to a Tableau dashboard. With so few rows, the figures are illustrative: they showcase technique, not business conclusions.
+> Scope note: this is a mini-dataset of 6 orders (January 1st–6th, 2026), used to practice and demonstrate SQL fundamentals (`SELECT`, `WHERE`, `GROUP BY`, aggregations) and to connect the results to a Tableau dashboard. With few rows, the figures are illustrative: they showcase technique, not business conclusions.
 
 ### Data strategy & architecture
 
@@ -27,13 +26,11 @@ Note : The data was already clean. I focused on preparing it for analysis and BI
 ### 2. Data dictionary
 <img width="709" height="82" alt="Capture d’écran 2026-03-12 à 12 12 13 PM" src="https://github.com/user-attachments/assets/a8aee99f-d87f-4a8f-8fa6-6437cf640ff4" />
 
-
 ### 3. Data schema
 
 The following diagram represents the structure of the orders table. It identifies the unique keys and the relationships within the dataset.
 <img width="396" height="187" alt="Capture d’écran 2026-03-12 à 11 55 23 AM" src="https://github.com/user-attachments/assets/f42649cc-af5d-49e9-afeb-e8dd1f0c100d" />
 
-   
 **Date formatting**: Date columns were converted to the Date type in Excel. This helps SQL and Tableau organize the data by day, month, or year.
 
 **Data typing (BI)**: In Tableau, dimensions (IDs, product names) and measures (prices/amounts) were separated. This makes sure the calculations (like (sum) or (average)) are correct.
@@ -68,7 +65,7 @@ Products insights :
 Dashboard :
 <img width="1001" height="708" alt="Capture d’écran 2026-03-13 à 1 14 18 PM" src="https://github.com/user-attachments/assets/eefe6083-9943-4d35-a3b1-3ab41c3f7dc4" />
 
-🚀 [View Interactive Dashboard: Tableau Public Link](https://public.tableau.com/views/Salesoperationsdashboard-Jan2026/Tableaudebord1?:language=fr-FR&publish=yes&:sid=&:display_count=n&:origin=viz_share_link)
+[View Interactive Dashboard: Tableau Public Link](https://public.tableau.com/views/Salesoperationsdashboard-Jan2026/Tableaudebord1?:language=fr-FR&publish=yes&:sid=&:display_count=n&:origin=viz_share_link)
 
 ### Performance Metrics
 **Objective**: Calculate key business metrics (revenue, order count, AOV) and filter high-value transactions.
@@ -144,7 +141,7 @@ Dashboard :
 <img width="993" height="786" alt="Capture d’écran 2026-03-13 à 2 13 13 PM" src="https://github.com/user-attachments/assets/5ec66a68-9408-4b59-bece-0d5e09727cc9" />
 
 
-🚀[View Interactive Dashboard: Tableau Public Link](https://public.tableau.com/views/RevenueAnalyticsOrderSegmentationDashboard/Revenueanalyticsordersegmentationdashboard?:language=fr-FR&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+[View Interactive Dashboard: Tableau Public Link](https://public.tableau.com/views/RevenueAnalyticsOrderSegmentationDashboard/Revenueanalyticsordersegmentationdashboard?:language=fr-FR&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 
 
@@ -166,111 +163,78 @@ An interactive Power BI dashboard analyzing career data, salaries, tech stacks, 
 
 ### Business intelligence and source
 - **Business intelligence:** Power BI (Data Modeling, DAX measures, Visualizations)
-- **Data Source:** Survey dataset (CSV) from Kaggle
+- **Data Source:** [Dataset (CSV)](./_Python_project_.csv)
 - **Power BI report:** [View the interactive report](https://app.powerbi.com/links/o5o5lzL7YH?ctid=a2697119-66c5-4126-9991-b0a8d15d367f&pbi_source=linkShare&bookmarkGuid=f9312a47-f44d-4465-9740-a04ae2b99de6)
+
+
 
 ## Python project: data professional survey EDA
 ### Project overview
-**Source notebook:**
-[`project_python.ipynb`](./project_python.ipynb)
+
 An Exploratory Data Analysis (EDA) on the global Data Professional Survey dataset using Python to clean complex text fields, calculate salary distribution, and visualize key trends.
 
 The use of the same database used on Power BI  but on Python with career data, salaries, tech stacks, and job satisfaction from a global survey of data professionals.
 
+**Source notebook:**
+[Notebook](_Python_Survey_project.ipynb)
+
 Python query :
-```
+
+```python
 import pandas as pd
 import matplotlib.pyplot as plt
+
 pd.set_option("display.max_columns", None)
 df = pd.read_csv(r"_Python_project_.csv")
-df.head()
 
-df.shape 
+# Explore the dataset
+df.head()       # first rows
+df.shape        # number of rows and columns
+df.info()       # column types and missing values
+df.describe()   # basic statistics
 
-df.head()
-
-df.info()  
-
-df.describe()
-
-df['Q1 - Which Title Best Fits your Current Role?'].unique()
-
-df['Q4 - What Industry do you work in?'].unique()
-df['Q11 - Which Country do you live in?'].unique()
+# Drop columns not needed for this analysis
 df = df.drop(columns=df.columns[4:9])
-Salary = df["Q3 - Current Yearly Salary (in USD)"]
 
-Salary = Salary.str.replace('+', '',regex=False)
+# Convert salary ranges (e.g. "100k-120k") into an estimated average salary
+Salary = df["Q3 - Current Yearly Salary (in USD)"]
+Salary = Salary.str.replace('+', '', regex=False)
 df[['Low', 'High']] = Salary.str.split('-', expand=True)
-print("inital NaN :", df["Q3 - Current Yearly Salary (in USD)"].isna().sum())
-df['Q3 - Current Yearly Salary (in USD)'].isna().sum()
-print(df[df['Q3 - Current Yearly Salary (in USD)'].isna()][['Q3 - Current Yearly Salary (in USD)', 'Low', 'High']])
 df['Low'] = df['Low'].str.replace('k', '', regex=False).astype(float) * 1000
 df['High'] = df['High'].str.replace('k', '', regex=False).astype(float) * 1000
-df['Salary_Mean'] = (df['Low'] + df['High']) / 2
-df["Q3 - Current Yearly Salary (in USD)"] = df['Salary_Mean']
-df = df.drop(columns=['Low', 'High', 'Salary_Mean'])
-print("after average calculation :", df["Q3 - Current Yearly Salary (in USD)"].isna().sum())
-empty_rows = df[df["Q3 - Current Yearly Salary (in USD)"].isna()]
-print(empty_rows)
-df.head()
+df["Q3 - Current Yearly Salary (in USD)"] = (df['Low'] + df['High']) / 2
+df = df.drop(columns=['Low', 'High'])
+
+# Check missing values after the conversion
+print(df["Q3 - Current Yearly Salary (in USD)"].isna().sum())
+
+# Group all "Other..." answers into a single "Other" category
 masque = df["Q1 - Which Title Best Fits your Current Role?"].str.startswith("Other", na=False)
 df.loc[masque, "Q1 - Which Title Best Fits your Current Role?"] = "Other"
+
 masque = df["Q4 - What Industry do you work in?"].str.startswith("Other", na=False)
 df.loc[masque, "Q4 - What Industry do you work in?"] = "Other"
+
 masque = df["Q11 - Which Country do you live in?"].str.startswith("Other", na=False)
 df.loc[masque, "Q11 - Which Country do you live in?"] = "Other"
+
 masque = df["Q5 - Favorite Programming Language"].str.startswith("Other", na=False)
 df.loc[masque, "Q5 - Favorite Programming Language"] = "Other"
-df['Q5 - Favorite Programming Language'].unique()
-df.head()
-df['Q3 - Current Yearly Salary (in USD)'].plot(kind='hist', bins=20, color='skyblue', edgecolor='black')
-
-plt.title('Distribution of average salary in USD')
-plt.xlabel('Average Salary in USD')
-plt.ylabel('Number of Respondents')
-
-
-plt.show()
-df['Q5 - Favorite Programming Language'].value_counts().head(8).plot(kind='barh')
-plt.title('Favorite Programming Language')
-plt.show()
-rows_q6 = [
-    'Q6 - How Happy are you in your Current Position with the following? (Salary)',
-    'Q6 - How Happy are you in your Current Position with the following? (Work/Life Balance)',
-    'Q6 - How Happy are you in your Current Position with the following? (Coworkers)',
-    'Q6 - How Happy are you in your Current Position with the following? (Management)',
-    'Q6 - How Happy are you in your Current Position with the following? (Upward Mobility)',
-    'Q6 - How Happy are you in your Current Position with the following? (Learning New Things)'
-]
-
-df[rows_q6].mean().plot(kind='barh')
-plt.title('Job satisfaction')
-plt.xlabel('Scale /10')
-plt.show()
-df['Q4 - What Industry do you work in?'].value_counts().head(10).plot(kind='barh')
-plt.title('Top industries')
-plt.show()
-plt.figure(figsize=(9, 5))
-plt.scatter(df['Q10 - Current Age'], df['Q3 - Current Yearly Salary (in USD)'], color='skyblue', edgecolor='black', alpha=0.7)
-
-plt.title('Relationship between age and salary', fontsize=14, fontweight='bold')
-plt.xlabel('Age', fontsize=12)
-plt.ylabel('Average salary in USD', fontsize=12)
-
-plt.show()
 ``` 
+
+Full code with all charts: [Python notebook](_Python_Survey_project.ipynb)
+
 
 ### Key steps & highlights
 - **Data cleaning & parsing:** Converted textual salary ranges (e.g., `100k-120k`) into numeric bounds to compute estimated average yearly compensation.
 - **Handling missing values:** Performed strict NaN validation to ensure data integrity during text-to-float transformations.
 - **Category standardization:** Cleaned and grouped multi-variant responses (such as "Other...") across roles, industries, countries, and languages.
 - **Exploratory visualizations:** Generated plots covering:
-  - Average Salary Distribution (Histogram) : 
-  - Top Favorite Programming Languages (Horizontal Bar Chart)
+  - Average salary distribution (Histogram) : 
+  - Top Favorite programming languages (Horizontal Bar Chart)
   - Job Satisfaction across 6 Key Pillars (Bar Chart)
-  - Top Working Industries (Horizontal Bar Chart)
-  - Relationship between Age and Compensation (Scatter Plot)
+  - Top working industries (Horizontal Bar Chart)
+  - Relationship between age and compensation (Scatter Plot)
     
 ### Visualizations & key insights
 
@@ -300,6 +264,6 @@ Conversely, Salary satisfaction receives the lowest score (around 4.2 / 10), ind
 - **Open-ended ranges and missing values.** Ranges without an upper bound (e.g. `200k+`) and non-numeric answers end up as NaN and are excluded from salary averages. 2 respondents are affected.
 - **Self-selected sample.** 630 respondents who chose to answer a survey, so the results are not representative of all data professionals.
 - **Self-reported data.** Salaries and satisfaction scores are declared, not verified.
-- **Columns dropped by position.** Columns 4 to 8 were removed because they were not needed for this analysis..
+- **Columns dropped by position.** Columns 4 to 8 were removed because they were not needed for this analysis.
 - **The age/salary scatter plot is descriptive only:** no correlation or statistical test was computed.
 
