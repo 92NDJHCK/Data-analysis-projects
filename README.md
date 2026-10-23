@@ -1,26 +1,33 @@
+# Data analysis portfolio
 ## About this repository 
 
 This repository serves as a personal portfolio showcasing end-to-end Data & Web Analytics projects. It combines hands-on experience in **SQL data extraction & analysis**, **interactive BI dashboards (Power BI & Tableau)** ,and **Python** to derive actionable business insights.
 
+- SQL Project: Orders Analysis (fundamentals)
+- [Power BI Project: Data Professional Survey](https://app.powerbi.com/links/o5o5lzL7YH?ctid=a2697119-66c5-4126-9991-b0a8d15d367f&pbi_source=linkShare&bookmarkGuid=f9312a47-f44d-4465-9740-a04ae2b99de6)
+- [Python Project: Data Professional Survey EDA](./project_python.ipynb)
 
-# SQL Project
 
-# Data strategy & architecture
+
+## SQL project : order analysis (fundamentals)
+> Scope note: this is a mini-dataset of 6 orders (January 1st–6th, 2026), used to practice and demonstrate SQL fundamentals (`SELECT`, `WHERE`, `GROUP BY`, aggregations) and to connect the results to a Tableau dashboard. With so few rows, the figures are illustrative: they showcase technique, not business conclusions.
+
+### Data strategy & architecture
 
 This section describes the framework and technical structure used to ensure data quality and project viability.
 
-## 1. The 7V framework (strategic analysis)
+### 1. The 7V framework (strategic analysis)
 
 The project is evaluated using the 7V model to balance technical constraints with business value.
 <img width="551" height="181" alt="Capture d’écran 2026-03-12 à 11 45 27 AM" src="https://github.com/user-attachments/assets/5d08c917-0f53-4fac-984a-e6356ea47aa1" />
 
 Note : The data was already clean. I focused on preparing it for analysis and BI integration.
 
-## 2. Data dictionary
+### 2. Data dictionary
 <img width="709" height="82" alt="Capture d’écran 2026-03-12 à 12 12 13 PM" src="https://github.com/user-attachments/assets/a8aee99f-d87f-4a8f-8fa6-6437cf640ff4" />
 
 
-## 3. Data schema
+### 3. Data schema
 
 The following diagram represents the structure of the orders table. It identifies the unique keys and the relationships within the dataset.
 <img width="396" height="187" alt="Capture d’écran 2026-03-12 à 11 55 23 AM" src="https://github.com/user-attachments/assets/f42649cc-af5d-49e9-afeb-e8dd1f0c100d" />
@@ -30,8 +37,8 @@ The following diagram represents the structure of the orders table. It identifie
 **Data typing (BI)**: In Tableau, dimensions (IDs, product names) and measures (prices/amounts) were separated. This makes sure the calculations (like (sum) or (average)) are correct.
 **Currency**: The $ (Dollar) symbol was added in Tableau to make the reports easier to read for the business.
 
-# - Top orders
-**Objective** : Analyze the initial transaction log to identify top-performing products and customer purchasing behavior for the period of January 1st–6th, 2026.
+### Top orders
+**Objective** : Analyze the initial transaction log to identify top-performing products and identify the highest-value orders for the period of January 1st–6th, 2026.
 
 SQL query:
 
@@ -47,28 +54,24 @@ ORDER BY amount DESC;
 
 Products insights : 
 
-* Based on the results, we can see that **the revenue Leader** is **Tires C** (Order ID: 3) is the top product in this dataset, generating $200.00 in a single transaction from customer_103.
-  
-* **Sales consistency**: The data shows a steady flow of one order per day. It’s interesting to note that the highest-value orders happened right at the start of the month (Jan 2nd and 3rd).
+* The highest-value order is #3 (Tires C, $200.00).
   
 * **Price range**: Our orders range **from $50 to $200**, showing a good variety in the types of products customers are choosing.
 
-Products recommendations : 
-* Promote **Tires C** as a featured product.
 
-* Investigate **early-month purchasing behavior** to see if marketing campaigns influenced sales.
-
-* Analyze **customer segmentation** to identify high-value buyers
+**What this exercise shows:**
+* Ranking orders by value, and computing revenue per product.
+* With a larger dataset, I would next look at purchase timing by day or month and at revenue per customer.
 
 Dashboard :
 <img width="1001" height="708" alt="Capture d’écran 2026-03-13 à 1 14 18 PM" src="https://github.com/user-attachments/assets/eefe6083-9943-4d35-a3b1-3ab41c3f7dc4" />
 
 🚀 [View Interactive Dashboard: Tableau Public Link](https://public.tableau.com/views/Salesoperationsdashboard-Jan2026/Tableaudebord1?:language=fr-FR&publish=yes&:sid=&:display_count=n&:origin=viz_share_link)
 
-# - Customer Insights & Performance Metrics
-**Objective**: Calculate key business metrics (Revenue, AOV, Order Frequency) and filter high-value transactions to define customer segments.
+### Performance Metrics
+**Objective**: Calculate key business metrics (revenue, order count, AOV) and filter high-value transactions.
 
-## 1. Revenue per product
+#### 1. Revenue per product
 
 SQL query:
 
@@ -85,14 +88,10 @@ ORDER BY revenue DESC;
 
 Products insights : 
 
-* Top Performer: Tires C is the clear leader with $200.00.
-
-* Average revenue: Tires B follows closely with $150.00.
-
-* Lowest revenue: Tires A generates the lowest revenue ($50.00).
+The result above ranks products by total revenue. Total revenue across all products is shown in the next query ($660.00).
   
 
-## 2. Global business metrics (total revenue, orders & AOV)
+#### 2. Global business metrics (total revenue, orders & AOV)
    
 SQL query :
 
@@ -118,7 +117,7 @@ Key Metrics:
 * Average order value (AOV): $110.00
   
 
-## 3. High-value analysis (products > $150)
+#### 3. High-value analysis (order > $150)
    
 SQL query:
 
@@ -136,10 +135,7 @@ HAVING SUM(amount) > 150;
 
 
 Insights:
-
-* Premium concentration: Only one transaction (Order_id = 3) exceeds the $150 threshold.
-
-* Customer profile: Customer_103 is currently the only "Premium" buyer in our dataset.
+Only one order (#3) exceeds $150.
 
 Dashboard :
 
@@ -150,16 +146,13 @@ Dashboard :
 
 
 
-# POWER BI PROJECT
+## POWER BI project : data professional survey
 
-
-# Data Professional Survey Dashboard
-
-## Project Overview
+### Project overview
 An interactive Power BI dashboard analyzing career data, salaries, tech stacks, and job satisfaction from a global survey of data professionals.
 <img width="1426" height="807" alt="Capture d’écran 2026-10-20 à 22 14 09" src="https://github.com/user-attachments/assets/32644523-6e54-411d-8fe6-4f70d604d956" />
 
-## Key Insights
+### Key insights
 - **Demographics:** 630 survey participants with an average age of 30 years (29.87).
 - **Geographic breakdown:** Top participant countries include the United States, India, Canada, and others.
 - **Compensation trends:** Data Scientists and Data Engineers report the highest average salaries among survey takers, followed by Data Architects and Data Analysts.
@@ -169,12 +162,13 @@ An interactive Power BI dashboard analyzing career data, salaries, tech stacks, 
   - **Salary happiness:** Rated at an average of **4.27 / 10**.
   - **Difficulty to break into Data:** ≈ 42.7% found it neither easy nor difficult, while over 45% found it difficult or very difficult.
 
-## Business Intelligence and Source
-- **Business Intelligence:** Power BI (Data Modeling, DAX measures, Visualizations)
-- **Data Source:** Survey dataset (CSV) from Kaggle 
+### Business intelligence and source
+- **Business intelligence:** Power BI (Data Modeling, DAX measures, Visualizations)
+- **Data Source:** Survey dataset (CSV) from Kaggle
+- **Power BI report:** [View the interactive report](https://app.powerbi.com/links/o5o5lzL7YH?ctid=a2697119-66c5-4126-9991-b0a8d15d367f&pbi_source=linkShare&bookmarkGuid=f9312a47-f44d-4465-9740-a04ae2b99de6)
 
-# Python Project: Data Professional Survey EDA
-## Overview
+## Python project: data professional survey EDA
+### Project overview
 An Exploratory Data Analysis (EDA) on the global Data Professional Survey dataset using Python to clean complex text fields, calculate salary distribution, and visualize key trends.
 
 The use of the same database used on Power BI  but on Python with career data, salaries, tech stacks, and job satisfaction from a global survey of data professionals.
@@ -221,7 +215,7 @@ df.loc[masque, "Q1 - Which Title Best Fits your Current Role?"] = "Other"
 masque = df["Q4 - What Industry do you work in?"].str.startswith("Other", na=False)
 df.loc[masque, "Q4 - What Industry do you work in?"] = "Other"
 masque = df["Q11 - Which Country do you live in?"].str.startswith("Other", na=False)
-df.loc[masque, "Q11 - Which Country do you live in?"] = "Other"`
+df.loc[masque, "Q11 - Which Country do you live in?"] = "Other"
 masque = df["Q5 - Favorite Programming Language"].str.startswith("Other", na=False)
 df.loc[masque, "Q5 - Favorite Programming Language"] = "Other"
 df['Q5 - Favorite Programming Language'].unique()
@@ -261,41 +255,48 @@ plt.xlabel('Age', fontsize=12)
 plt.ylabel('Average salary in USD', fontsize=12)
 
 plt.show()
-```
+``` python
 
-
-## Key Steps & Highlights
-- **Data Cleaning & Parsing:** Converted textual salary ranges (e.g., `100k-120k`) into numeric bounds to compute exact average yearly compensation.
-- **Handling Missing Values:** Performed strict NaN validation to ensure data integrity during text-to-float transformations.
-- **Category Standardization:** Cleaned and grouped multi-variant responses (such as "Other...") across roles, industries, countries, and languages.
-- **Exploratory Visualizations:** Generated plots covering:
+### Keys steps & highlights
+- **Data cleaning & parsing:** Converted textual salary ranges (e.g., `100k-120k`) into numeric bounds to compute estimated average yearly compensation.
+- **Handling missing values:** Performed strict NaN validation to ensure data integrity during text-to-float transformations.
+- **Category standardization:** Cleaned and grouped multi-variant responses (such as "Other...") across roles, industries, countries, and languages.
+- **Exploratory visualizations:** Generated plots covering:
   - Average Salary Distribution (Histogram) : 
   - Top Favorite Programming Languages (Horizontal Bar Chart)
   - Job Satisfaction across 6 Key Pillars (Bar Chart)
   - Top Working Industries (Horizontal Bar Chart)
   - Correlation between Age and Compensation (Scatter Plot)
     
-- **Visualizations & Key Insights**
+### Visualizations & key insights
 
 <img width="606" height="451" alt="Capture d’écran 2026-10-23 à 14 30 50" src="https://github.com/user-attachments/assets/e795a763-6402-47f2-ac5b-13453efbb8ab" />
 
-**Distribution of Average Salary in USD:** The salary distribution is right-skewed. The vast majority of respondents earn within the lower brackets (under $50,000), with a sharp peak around $25,000. Higher salary brackets ($100,000+) contain significantly fewer respondents, pulling up the overall average.
+**Distribution of average salary in USD:** The salary distribution is right-skewed. The vast majority of respondents earn within the lower brackets (under $50,000), with a sharp peak around $25,000. Higher salary brackets ($100,000+) contain significantly fewer respondents, pulling up the overall average.
 
 <img width="729" height="439" alt="Capture d’écran 2026-10-23 à 14 31 10" src="https://github.com/user-attachments/assets/72c22149-2323-4ef9-a5dd-f31db282bae1" />
 
-**Favorite Programming Language:** Python is overwhelmingly the dominant language chosen by data professionals, with over 400 respondents. It is followed distantly by R and the "Other" category, while Java, JavaScript, and C/C++ register very low adoption in this specific dataset.   
+**Favorite programming language:** Python is overwhelmingly the dominant language chosen by data professionals, with over 400 respondents. It is followed distantly by R and the "Other" category, while Java, JavaScript, and C/C++ register very low adoption in this specific dataset.   
 
 <img width="1150" height="437" alt="Capture d’écran 2026-10-23 à 14 31 22" src="https://github.com/user-attachments/assets/2680e0ce-1786-439c-b7cb-7e2c901021fb" />
 
-**Job Satisfaction:** Respondents report the highest satisfaction levels in Coworkers and Work/Life Balance (both scoring close to 5.8 / 10).
+**Job satisfaction:** Respondents report the highest satisfaction levels in Coworkers and Work/Life Balance (both scoring close to 5.8 / 10).
 Conversely, Salary satisfaction receives the lowest score (around 4.2 / 10), indicating a widespread desire for better financial compensation across roles.
 
 <img width="742" height="428" alt="Capture d’écran 2026-10-23 à 14 32 33" src="https://github.com/user-attachments/assets/cfdb23a8-058b-4849-9d49-5da401d161fb" />
 
-**Top Industries:** Aside from the grouped "Other" category, Tech is by far the leading industry employing data professionals (around 150 respondents), followed by Finance and Healthcare. Traditional sectors like Real Estate, Construction, and Agriculture show much lower representation.
+**Top industries:** Aside from the grouped "Other" category, Tech is by far the leading industry employing data professionals (around 150 respondents), followed by Finance and Healthcare. Traditional sectors like Real Estate, Construction, and Agriculture show much lower representation.
 
 <img width="872" height="480" alt="Capture d’écran 2026-10-23 à 14 32 47" src="https://github.com/user-attachments/assets/7e7b08c0-907f-44a4-b7e0-ae9c92d59b36" />
 
 **Relationship Between Age and Salary:** The scatter plot reveals that high earners ($125,000 to nearly $200,000) are primarily concentrated within the core working age bracket of 25 to 45 years old. Extreme age groups (under 20 or over 60) mostly cluster around entry-level or lower salary tiers.
 
-**Source Notebook:** [`project_python.ipynb`](./project_python.ipynb)
+### Limitations
+- **Salaries are estimates.** The survey gives salary ranges (e.g. `100k-120k`), so I used the midpoint of each range. This smooths the real distribution and can create artificial peaks in the histogram.
+- **Open-ended ranges and missing values.** Ranges without an upper bound (e.g. `200k+`) and non-numeric answers end up as NaN and are excluded from salary averages. 2 respondents are affected.
+- **Self-selected sample.** 630 respondents who chose to answer a survey, so the results are not representative of all data professionals.
+- **Self-reported data.** Salaries and satisfaction scores are declared, not verified.
+- **Columns dropped by position.** Columns 4 to 8 were removed because (reason : not really needed for the analysis).
+- **Descriptive only.** The age/salary scatter plot shows a relationship visually between age and compensation.
+**Source notebook:**
+  [`project_python.ipynb`](./project_python.ipynb)
