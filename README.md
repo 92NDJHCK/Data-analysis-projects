@@ -1,4 +1,4 @@
-## About This Repository 
+## About this repository 
 
 This repository serves as a personal portfolio showcasing end-to-end Data & Web Analytics projects. It combines hands-on experience in **SQL data extraction & analysis**, **interactive BI dashboards (Power BI & Tableau)** ,and **Python** to derive actionable business insights.
 
