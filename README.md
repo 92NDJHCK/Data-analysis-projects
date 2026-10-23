@@ -171,7 +171,6 @@ An interactive Power BI dashboard analyzing career data, salaries, tech stacks, 
 
 ## Business Intelligence and Source
 - **Business Intelligence:** Power BI (Data Modeling, DAX measures, Visualizations)
-- 
 - **Data Source:** Survey dataset (CSV) from Kaggle 
 
 # Python Project: Data Professional Survey EDA
@@ -284,12 +283,14 @@ plt.show()
 <img width="729" height="439" alt="Capture d’écran 2026-10-23 à 14 31 10" src="https://github.com/user-attachments/assets/72c22149-2323-4ef9-a5dd-f31db282bae1" />
 
 **Favorite Programming Language:** Python is overwhelmingly the dominant language chosen by data professionals, with over 400 respondents. It is followed distantly by R and the "Other" category, while Java, JavaScript, and C/C++ register very low adoption in this specific dataset.   
+
 <img width="1150" height="437" alt="Capture d’écran 2026-10-23 à 14 31 22" src="https://github.com/user-attachments/assets/2680e0ce-1786-439c-b7cb-7e2c901021fb" />
 
 **Job Satisfaction:** Respondents report the highest satisfaction levels in Coworkers and Work/Life Balance (both scoring close to 5.8 / 10).
 Conversely, Salary satisfaction receives the lowest score (around 4.2 / 10), indicating a widespread desire for better financial compensation across roles.
 
 <img width="742" height="428" alt="Capture d’écran 2026-10-23 à 14 32 33" src="https://github.com/user-attachments/assets/cfdb23a8-058b-4849-9d49-5da401d161fb" />
+
 **Top Industries:** Aside from the grouped "Other" category, Tech is by far the leading industry employing data professionals (around 150 respondents), followed by Finance and Healthcare. Traditional sectors like Real Estate, Construction, and Agriculture show much lower representation.
 
 <img width="872" height="480" alt="Capture d’écran 2026-10-23 à 14 32 47" src="https://github.com/user-attachments/assets/7e7b08c0-907f-44a4-b7e0-ae9c92d59b36" />
