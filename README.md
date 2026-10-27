@@ -29,6 +29,7 @@ Note : The data was already clean. I focused on preparing it for analysis and BI
 ### 3. Data schema
 
 The following diagram represents the structure of the orders table. It identifies the unique keys and the relationships within the dataset.
+
 <img width="396" height="187" alt="Capture d’écran 2026-03-12 à 11 55 23 AM" src="https://github.com/user-attachments/assets/f42649cc-af5d-49e9-afeb-e8dd1f0c100d" />
 
 **Date formatting**: Date columns were converted to the Date type in Excel. This helps SQL and Tableau organize the data by day, month, or year.
