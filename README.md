@@ -232,10 +232,10 @@ Full code with all charts: [Python notebook](_Python_Survey_project.ipynb)
 - **Category standardization:** Cleaned and grouped multi-variant responses (such as "Other...") across roles, industries, countries, and languages.
 - **Exploratory visualizations:** Generated plots covering:
   - Average salary distribution (Histogram) : 
-  - Top Favorite programming languages (Horizontal Bar Chart)
-  - Job Satisfaction across 6 Key Pillars (Bar Chart)
-  - Top working industries (Horizontal Bar Chart)
-  - Relationship between age and compensation (Scatter Plot)
+  - Top favorite programming languages (Horizontal bar chart)
+  - Job satisfaction across 6 Key Pillars (Bar chart)
+  - Top working industries (Horizontal bar chart)
+  - Relationship between age and compensation (Scatter plot)
     
 ### Visualizations & key insights
 
@@ -249,8 +249,8 @@ Full code with all charts: [Python notebook](_Python_Survey_project.ipynb)
 
 <img width="1150" height="437" alt="Capture d’écran 2026-10-23 à 14 31 22" src="https://github.com/user-attachments/assets/2680e0ce-1786-439c-b7cb-7e2c901021fb" />
 
-**Job satisfaction:** Respondents report the highest satisfaction levels in Coworkers and Work/Life Balance (both scoring close to 5.8 / 10).
-Conversely, Salary satisfaction receives the lowest score (around 4.2 / 10), indicating a widespread desire for better financial compensation across roles.
+**Job satisfaction:** Respondents report the highest satisfaction levels in coworkers and Work/Life balance (both scoring close to 5.8 / 10).
+Conversely, salary satisfaction receives the lowest score (around 4.2 / 10), indicating a widespread desire for better financial compensation across roles.
 
 <img width="742" height="428" alt="Capture d’écran 2026-10-23 à 14 32 33" src="https://github.com/user-attachments/assets/cfdb23a8-058b-4849-9d49-5da401d161fb" />
 
